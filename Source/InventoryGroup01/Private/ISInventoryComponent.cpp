@@ -21,13 +21,17 @@ bool UISInventoryComponent::AddItemToInventory(FName NewItem)
 }
 
 // Check if the inventory array contains an item
-bool UISInventoryComponent::QueryInventory()
+bool UISInventoryComponent::QueryInventory(FName NewItem)
 {
-	return true;
+	if (Inventory.Contains(NewItem))
+	{
+		return true;
+	}
+	return false;
 }
 
 // Remove an existing item from the inventory
-bool UISInventoryComponent::RemoveItemFromInventory()
+bool UISInventoryComponent::RemoveItemFromInventory(FName ItemToRemove)
 {
 	return true;
 }

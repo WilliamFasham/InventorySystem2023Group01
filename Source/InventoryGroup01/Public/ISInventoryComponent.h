@@ -24,11 +24,11 @@ public:
 
 	// Check if the inventory array contains an item
 	UFUNCTION(BlueprintPure)
-	bool QueryInventory();
+	bool QueryInventory(FName NewItem);
 
 	// Remove an item from the inventory array
 	UFUNCTION(BlueprintCallable)
-	bool RemoveItemFromInventory();
+	bool RemoveItemFromInventory(FName ItemToRemove);
 
 	UFUNCTION(BlueprintPure)
 	TArray<FName> GetInventory();
